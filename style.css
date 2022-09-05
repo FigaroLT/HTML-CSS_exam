@@ -1,0 +1,326 @@
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.logo {
+  padding: 5px;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  padding: 2em;
+}
+.top-nav a {
+  border: none;
+  background: none;
+  color: grey;
+  text-decoration: none;
+}
+.top-nav .signup {
+  color: #c91a9d;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: grey;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: whitesmoke;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 2px solid gray;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: grey;
+    background-color: whitesmoke;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+main {
+  padding: 2em;
+}
+
+.flex-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.flex-left {
+  margin-top: 100px;
+  width: 55%;
+}
+.flex-left .launch {
+  font-weight: 900;
+  color: #c91a9d;
+}
+.flex-left h1 {
+  font-size: 100px;
+  font-weight: bolder;
+}
+.flex-left .attention {
+  color: grey;
+}
+.flex-left .sign_up {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background: none;
+  font-weight: 600;
+  border: none;
+  position: relative;
+}
+.flex-left .sign_up::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 5px;
+  background: linear-gradient(20deg, purple, orange, lightgreen);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.flex-right {
+  width: 45%;
+  height: auto;
+}
+.flex-right .img {
+  width: 350px;
+  height: auto;
+}
+
+.free-radiant {
+  background-image: url(/assets/background.svg);
+  background-size: 100%;
+  height: 320px;
+  border-style: white solid;
+  border-radius: 10px;
+}
+.free-radiant .free-text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4em;
+  padding-left: 4em;
+}
+.free-radiant .free-text h3 {
+  font-size: 50px;
+}
+
+.flex-logo {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.auction-heading h3 {
+  font-size: 50px;
+}
+.auction-heading p {
+  color: grey;
+}
+.auction-heading a {
+  color: grey;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 100%;
+  justify-content: space-between;
+}
+.grid-container .ntf {
+  background-color: lightgray;
+  border-style: white solid;
+  border-radius: 15px;
+}
+.grid-container .ntf .description {
+  display: grid;
+  grid-template-columns: auto auto;
+  height: 80px;
+  padding: 1em;
+  align-content: center;
+  row-gap: 5px;
+}
+.grid-container .ntf .description > div:nth-child(even) {
+  justify-content: flex-end;
+}
+.grid-container .ntf .description > div:nth-child(odd) {
+  justify-content: left;
+}
+.grid-container .ntf .series {
+  color: goldenrod;
+  font-size: x-small;
+}
+.grid-container .ntf .bid {
+  color: grey;
+  font-size: x-small;
+}
+.grid-container .ntf .name,
+.grid-container .ntf .price {
+  font-weight: 400;
+}
+.grid-container .ntf .price > img {
+  padding-right: 5px;
+}
+.grid-container .ntf .number,
+.grid-container .ntf .time {
+  color: grey;
+}
+
+.flex-green {
+  margin-top: 100px;
+  display: flex;
+  border-top: lightgrey solid;
+  border-bottom: lightgrey solid;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.flex-green .flex-rgreen {
+  display: flex;
+  width: 45%;
+  justify-content: center;
+}
+.flex-green .flex-lgreen {
+  margin-top: 100px;
+  width: 55%;
+}
+.flex-green .flex-lgreen .launch {
+  font-weight: 900;
+  color: #c91a9d;
+}
+.flex-green .flex-lgreen h2 {
+  font-size: 70px;
+  font-weight: bolder;
+  text-align: left;
+}
+.flex-green .flex-lgreen .attention {
+  color: grey;
+}
+.flex-green .flex-lgreen .sign_up {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background: none;
+  font-weight: 600;
+  border: none;
+  position: relative;
+}
+.flex-green .flex-lgreen .sign_up::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 5px;
+  background: linear-gradient(20deg, purple, orange, lightgreen);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}/*# sourceMappingURL=style.css.map */

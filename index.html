@@ -6,27 +6,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFT Startup Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Rubik+Maze&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <div class="navbar">
+        <section class="top-nav">
             <div class="logo">
-                <a href="#home"><img src="assets/logo.svg" alt="logo"></a>
+                <a href="#home"><img src="/assets/logo.svg" alt="Logo"></a>
             </div>
-            <button id="menu">
-                <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#launch">Launch</a></li>
-                    <li><a href="#signup">Sign Up</a></li>
-                </ul>
-            </button>
-        </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#launch">Launch</a></li>
+                <li><a class="signup" href="#signup">Sign Up</a></li>
+            </ul>
+        </section>
     </header>
     <main>
+        <div class="flex-container">
+            <div class="flex-left">
+                <p class="launch">LAUNCHING SOON</p>
+                <h1>An NFT like no other</h1>
+                <p class="attention">Don't miss out on the release of our new NFT. Sign up below to receive updates when
+                    we go live.</p>
 
+                <button class="sign_up" type="button">Sign Up</button>
+            </div>
+            <div class="flex-right">
+                <img src="/assets/graphic.svg" alt="Purple NFT">
+            </div>
+        </div>
+        <div class="free-radiant">
+            <div class="free-text">
+                <h3>Free NFT for early birds</h3>
+                <p>Sign up today and you'll get a free NFT when we launch.</p>
+            </div>
+        </div>
+        <div class="flex-logo">
+            <img src="/assets/companies/1.svg" alt="Boomerang">
+            <img src="/assets/companies/2.svg" alt="Blimp">
+            <img src="/assets/companies/3.svg" alt="qrco">
+            <img src="/assets/companies/4.svg" alt="OpenDoor">
+            <img src="/assets/companies/5.svg" alt="Droplet">
+        </div>
+        <div class="auction">
+            <div class="auction-heading">
+                <h3>LE Super Rare Auction</h3>
+                <p>We have released four limited edition NFTs early which can be bin on via <a
+                        href="#opensea">OpenSea</a>.</p>
+
+                <div class="grid-container">
+                    <div class="ntf"><a href="#ntf1"><img src="/assets/ntfs/ntf-1.svg" alt="NTF1"></a>
+                        <div class="description">
+                            <div class="series">GLOOP</div>
+                            <div class="bid">TOP BID</div>
+                            <div class="name">Purple Man</div>
+                            <div class="price"><img src="/assets/eth.svg" alt="ETH">2.99 ETH</div>
+                            <div class="number">#12983</div>
+                            <div class="time">1 day left</div>
+                        </div>
+                    </div>
+                    <div class="ntf"><a href="#ntf2"><img src="/assets/ntfs/nft-2.svg" alt="NTF2"></a>
+                        <div class="description">
+                            <div class="series">GLOOP</div>
+                            <div class="bid">TOP BID</div>
+                            <div class="name">Beige</div>
+                            <div class="price"><img src="/assets/eth.svg" alt="ETH">2.99 ETH</div>
+                            <div class="number">#12983</div>
+                            <div class="time">1 day left</div>
+                        </div>
+                    </div>
+                    <div class="ntf"><a href="#ntf3"><img src="/assets/ntfs/ntf-3.svg" alt="NTF3"></a>
+                        <div class="description">
+                            <div class="series">GLOOP</div>
+                            <div class="bid">TOP BID</div>
+                            <div class="name">Red Man</div>
+                            <div class="price"><img src="/assets/eth.svg" alt="ETH">2.99 ETH</div>
+                            <div class="number">#12983</div>
+                            <div class="time">1 day left</div>
+                        </div>
+                    </div>
+                    <div class="ntf"><a href="#ntf4"><img src="/assets/ntfs/ntf-4.svg" alt="NTF4"></a>
+                        <div class="description">
+                            <div class="series">GLOOP</div>
+                            <div class="bid">TOP BID</div>
+                            <div class="name">Green</div>
+                            <div class="price"><img src="/assets/eth.svg" alt="ETH">2.99 ETH</div>
+                            <div class="number">#12983</div>
+                            <div class="time">1 day left</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="flex-green">
+            <div class="flex-lgreen">
+                <p class="launch">LAUNCHING SOON</p>
+                <h2>An NFT like no other</h2>
+                <p class="attention">Don't miss out on the release of our new NFT. Sign up below to receive updates when
+                    we go live.</p>
+
+                <button class="sign_up" type="button">Sign Up</button>
+            </div>
+            <div class="flex-rgreen">
+                <img src="/assets/upsell-footer-image.svg" alt="Green NFT">
+            </div>
+        </div>
     </main>
 
     <footer>
